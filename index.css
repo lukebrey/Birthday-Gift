@@ -24,6 +24,10 @@ body {
     position: relative;
 }
 
+.main_body div{
+    margin: 20px;
+}
+
 .header h1 {
     font-weight: bold;
     font-size: 75px;
@@ -37,5 +41,5 @@ body {
 }
 
 p {
-    font-size: 20px;
+    font-size: 40px;
 }
