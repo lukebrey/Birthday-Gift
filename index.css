@@ -65,6 +65,7 @@ body {
     margin: 0%;
 }
 .portland p {
+    display: flex;
     padding: 0%;
     margin: 0%;
 }
