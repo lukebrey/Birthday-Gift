@@ -8,11 +8,25 @@
 </head>
 <body>
 	<div class = "container">
-        <div></div>
-        <div class = "password">
-            <input type = "password" placeholder = "Please enter password"/>
+        <div class = "cont1"> 
+            <p>0001<br>00010110<br>00010110<br>00010010<br>0101</p>
         </div>
-        <div></div>
+
+        <div class = "password">
+            <div class="holder">
+                <input id = "pword" type = "password" placeholder = "Please enter password"/>
+                <button onclick="changepage()">Go</button>
+            </div>
+            <div class="hint">
+                <p>This is a puzzle, if you need a hint message me :)</p>
+            </div>
+            <div>
+                <p id = "incorrect"></p>
+            </div>
+        </div>
+        <div class = "cont2">
+            <p>00011001<br>00010101<br>00100001<br>00011000<br>00100110</p>
+        </div>
     </div>
 
 	<script>
@@ -20,13 +34,80 @@
 	</script>
 
     <style>
+
+        
+
+        body{
+            margin: 5px;
+            padding: 5px;
+            justify-content: center;
+        }
+
+        .holder {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .hint {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
         .container {
             display: grid;
-            grid-template-columns:  auto auto auto;
+            grid-template-columns:  20% 60% 20%;
             justify-content: center;
             align-items: center;
             height: 100vh;
         }
+
+        #incorrect {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: red;
+        }
+
+        .password {
+            display: grid;
+            grid-template-columns: auto;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .cont1 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 70px;
+        }
+
+        .cont2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 70px;
+        }
     </style>
+
+    <script>
+        function changepage() {
+            var password = document.getElementById("pword")
+            if (password.value.toLowerCase() === "apple sourz") {
+                window.location.assign("index.html");
+            } else if (password.value.toLowerCase() === "applesourz") {
+                window.location.assign("index.html");
+            }
+            else {
+                document.getElementById("incorrect").innerHTML = "Incorrect password"
+            }
+            
+        }
+
+
+    </script>
 </body>
 </html>
